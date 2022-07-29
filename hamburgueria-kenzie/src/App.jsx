@@ -1,5 +1,6 @@
 import Header from "./components/Header"
 import ProductList from "./components/ProductsList";
+import Cart from "./components/Cart";
 
 import { useEffect, useState } from "react";
 
@@ -19,6 +20,8 @@ function App() {
 
   },[])
 
+  const [ foodsCart, setFoodsCart ] = useState(["g"])
+
   return (
     <>
       <GlobalStyled/>
@@ -27,6 +30,7 @@ function App() {
 
         <div className="blockStyle">
             <ProductList foods={foods}/>
+            <Cart foodsCart={foodsCart}/>
         </div>
 
       </div>
