@@ -4,6 +4,7 @@ export const ButtonStyled = styled.button`
 
     transition: 300ms;
 
+    font-family: var(--font-inter);
     font-size: 14px;
     font-weight: 500;
 
@@ -18,6 +19,10 @@ export const ButtonStyled = styled.button`
     }
 
     padding: 11.5px 20px;
+
+    ${
+        ({ marginLeft }) => marginLeft && css`margin-left: 20px;`
+    }
 
     border-radius: 8px;
     outline: 0;
