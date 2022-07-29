@@ -12,6 +12,7 @@ export const SearchStyled = styled.div`
     min-height: 60px;
 
     padding: 10px;
+    margin: 0px 16px;
 
     display: flex;
     justify-content: space-between;
