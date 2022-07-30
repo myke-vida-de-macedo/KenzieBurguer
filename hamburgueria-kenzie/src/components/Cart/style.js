@@ -8,8 +8,6 @@ export const CartStyled = styled.div`
 
     height: auto;
 
-    background-color: blue;
-
     padding: 0px 16px;
 
     display: flex;
@@ -17,6 +15,12 @@ export const CartStyled = styled.div`
     align-items: center;
 
     font-family: var(--font-inter);
+
+    @media(min-width:1000px){
+        width: auto;
+
+        padding: 0px 0px 0px 65px;
+    }
 
     .header{
 
@@ -37,6 +41,12 @@ export const CartStyled = styled.div`
         
         text-align: start;
 
+        @media(min-width:1000px){
+            width: 100%;
+            min-width: 365px;
+            max-width: 365px;
+        }
+
         .header__tittle{
             font-size: 18px;
             font-weight: 700;
@@ -54,6 +64,12 @@ export const CartStyled = styled.div`
         
         display: flex;
         flex-direction: column;
+
+        @media(min-width:1000px){
+            width: 100%;
+            min-width: 365px;
+            max-width: 365px;
+        }
 
         ${( {foodsCart} )=>
 
@@ -106,12 +122,41 @@ export const CartStyled = styled.div`
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        
+
+        padding: 0px 18.45px 20px 18.45px;
+        border-radius: 0px 0px 5px 5px;
+
+        @media(min-width:1000px){
+            width: 100%;
+            min-width: 365px;
+            max-width: 365px;
+        }
+
         .total__linha{
-            width: 80%;
+            width: 90%;
             height: 2px;
 
             background-color: var(--grey-20);
+        }
+
+        .total__information{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .information__total{
+            font-size: 14px;
+            font-weight: 600;
+             
+            color: var(--grey-100);
+        }
+
+        .information__value{
+            font-size: 14px ;
+            font-weight: 600;
+             
+            color: var(--grey-50);
         }
     }
 `
