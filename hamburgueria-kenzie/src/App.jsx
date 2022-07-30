@@ -14,7 +14,8 @@ function App() {
   
   const [ foods, setFoods ] = useState([])
   const [ foodsCart, setFoodsCart ] = useState([])
-  const [ valueCat, setValueCat ]= useState(0)
+  const [ valueCat, setValueCat ] = useState(0)
+  const [ filterProducts, setFilterProducts ] = useState([])
 
   useEffect(()=> {
 
@@ -26,11 +27,11 @@ function App() {
     <>
       <GlobalStyled/>
       <div className="App">
-        <Header/>
+        <Header foods={foods} setFilterProducts={setFilterProducts}/>
 
         <div className="blockStyle">
-            <ProductList foods={foods}/>
-            <Cart valueCat={valueCat} foodsCart={foodsCart}/>
+            <ProductList foods={foods} setFoodsCart={setFoodsCart} setValueCat={setValueCat} filterProducts={filterProducts}/>
+            <Cart valueCat={valueCat} foodsCart={foodsCart} setFoodsCart={setFoodsCart} setValueCat={setValueCat}/>
         </div>
 
       </div>
