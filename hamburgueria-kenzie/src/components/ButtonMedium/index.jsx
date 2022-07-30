@@ -1,9 +1,9 @@
 import { ButtonStyled } from "./style"
 
-export default function ButtonMedium({type, children, green, marginLeft}){
+export default function ButtonMedium({id, type, children, green, marginLeft, onClick}){
 
     return(
-        <ButtonStyled marginLeft={marginLeft} type={type} green={green}>
+        <ButtonStyled id={id} onClick={onClick} marginLeft={marginLeft} type={type} green={green}>
             {children}
         </ButtonStyled>
     )

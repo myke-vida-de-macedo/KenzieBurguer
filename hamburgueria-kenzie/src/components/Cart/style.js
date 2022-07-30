@@ -65,6 +65,16 @@ export const CartStyled = styled.div`
         display: flex;
         flex-direction: column;
 
+        ::-webkit-scrollbar{
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb{
+            width: 5px;
+            background-color: gray;
+            border-radius: 10px;
+        }
+
         @media(min-width:1000px){
             width: 100%;
             min-width: 365px;
@@ -82,9 +92,16 @@ export const CartStyled = styled.div`
                 `
             :
                 css`height: 323px;
+
+                align-items: center;
+
+                padding: 20px 10px 0px 10px;
+
+                overflow:hidden scroll;
                 
                 `
         }
+
 
         background-color: var(--grey-0);
 

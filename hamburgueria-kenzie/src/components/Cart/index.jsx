@@ -1,9 +1,10 @@
 import ButtonLarge from "../ButtonLarge"
+import CartCardProduct from "../CartCardProduct"
 
 import { CartStyled } from "./style"
 
-export default function Cart({ foodsCart, valueCat }){
-
+export default function Cart({ foodsCart, valueCat, setFoodsCart, setValueCat }){
+    
     return(
         <CartStyled foodsCart={foodsCart}>
             <div className="header">
@@ -17,7 +18,9 @@ export default function Cart({ foodsCart, valueCat }){
                             <span className="products__description">Adicione itens</span>
                         </>
                     :   
-                        <span></span>
+                        
+                        foodsCart.map( ( food ) => <CartCardProduct key={food.id} food={food} setFoodsCart={setFoodsCart} setValueCat={setValueCat}/> )
+                        
                         
                 }
             </section>
@@ -32,7 +35,7 @@ export default function Cart({ foodsCart, valueCat }){
                             <span className="information__value">{`R$ ${ valueCat.toFixed(2) }`}</span>
                         </div>
 
-                        <ButtonLarge>Remover Todos</ButtonLarge>
+                        <ButtonLarge onClick={() => {setFoodsCart([]); setValueCat(0)}}>Remover Todos</ButtonLarge>
                     </div>
                 }
         </CartStyled>

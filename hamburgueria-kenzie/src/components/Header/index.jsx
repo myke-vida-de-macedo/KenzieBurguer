@@ -3,12 +3,12 @@ import Logo from "../Logo"
 
 import { HeaderStyled } from "./style.js"
 
-export default function Header(){
+export default function Header({foods, setFilterProducts}){
 
     return(
         <HeaderStyled>
             <Logo/>
-            <Search/>
+            <Search foods={foods} setFilterProducts={setFilterProducts}/>
         </HeaderStyled>
     )
 }
