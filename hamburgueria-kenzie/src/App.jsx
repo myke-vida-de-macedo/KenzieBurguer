@@ -13,14 +13,14 @@ import './styles/App.css';
 function App() {
   
   const [ foods, setFoods ] = useState([])
+  const [ foodsCart, setFoodsCart ] = useState([])
+  const [ valueCat, setValueCat ]= useState(0)
 
   useEffect(()=> {
 
     api.get("/products").then( result => setFoods( result.data ))
 
   },[])
-
-  const [ foodsCart, setFoodsCart ] = useState(["g"])
 
   return (
     <>
@@ -30,7 +30,7 @@ function App() {
 
         <div className="blockStyle">
             <ProductList foods={foods}/>
-            <Cart foodsCart={foodsCart}/>
+            <Cart valueCat={valueCat} foodsCart={foodsCart}/>
         </div>
 
       </div>

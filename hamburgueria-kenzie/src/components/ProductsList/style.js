@@ -19,4 +19,18 @@ export const ProductListStyled = styled.section`
         background-color: transparent;
     }
 
+    @media(min-width:1000px){
+        width: 100%;
+        
+        padding:0px;
+
+        overflow:unset;
+
+        flex-wrap: wrap;
+
+        width: auto;
+        min-height: unset;
+        max-height: unset;
+    }
+
 `

@@ -1,6 +1,8 @@
+import ButtonLarge from "../ButtonLarge"
+
 import { CartStyled } from "./style"
 
-export default function Cart({ foodsCart }){
+export default function Cart({ foodsCart, valueCat }){
 
     return(
         <CartStyled foodsCart={foodsCart}>
@@ -25,11 +27,12 @@ export default function Cart({ foodsCart }){
                     <div className="total">
                         <span className="total__linha"></span>
 
-                        <div>
-                            <span>Total</span>
-                            <span>0</span>
+                        <div className="total__information">
+                            <span className="information__total">Total</span>
+                            <span className="information__value">{`R$ ${ valueCat.toFixed(2) }`}</span>
                         </div>
 
+                        <ButtonLarge>Remover Todos</ButtonLarge>
                     </div>
                 }
         </CartStyled>

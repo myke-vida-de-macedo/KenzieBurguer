@@ -22,6 +22,10 @@ export const SearchStyled = styled.div`
     border: 2px solid var(--grey-20);
     border-radius: 8px;
 
+    @media(min-width:1000px){
+        margin: 0px 0px;
+    }
+
     .Entrada{
         width: calc(100% - 64px);
 
